@@ -572,7 +572,7 @@ def get_book_isbn_from_QR(window_name):
 
 
 def issue_book(entered_username):
-    get_user = st.radio(label='Get User',options=['Check QR','Username'],index=1)
+    get_user = st.radio(label='Get User',options=['Select','Not Selected'],index=1)
     # get_user = st.checkbox(label='Check QR',value=False)
     if get_user == 'Check QR':
         user = get_username_from_QR("Show QR on Library Card : Issue Book")
