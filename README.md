@@ -2,6 +2,15 @@
 ![image](https://github.com/sukritiguin/Library-Management-System/assets/89704581/bc4745f8-9d10-4a58-ada7-b97ad1cc423b)
 ![image](https://github.com/sukritiguin/Library-Management-System/assets/89704581/c0a9a27a-f42b-4489-a9a8-c7dea2997bd1)
 
+## How app looks ?
+![image](https://github.com/sukritiguin/Library-Management-System/assets/89704581/c5628e61-09a5-43b5-9bbc-46534fed36ed)
+![image](https://github.com/sukritiguin/Library-Management-System/assets/89704581/ed573ec2-d053-4a63-a24e-ff14fea90e7b)
+![image](https://github.com/sukritiguin/Library-Management-System/assets/89704581/2a94514e-ff7d-400a-a9e5-548b6688cad1)
+![image](https://github.com/sukritiguin/Library-Management-System/assets/89704581/fa39df04-0a63-49d1-b196-62e1d4968203)
+
+
+
+
 
 # Title: Building a Library Management System with Python and PostgreSQL
 
