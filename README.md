@@ -29,6 +29,26 @@ Building a Library Management System using Python and PostgreSQL provides an eff
 In summary, this article has outlined the process of building a Library Management System using Python and PostgreSQL. By following the provided code snippets and explanations, developers can gain a solid foundation for creating their own library management solutions. With the system in place, librarians can efficiently manage books, track transactions, and provide seamless services to library users.
 
 
+***
+
+### `app.py`
+The application starts with the Streamlit import and the import of two custom modules: `sql_queries` and `utilities`. These modules likely contain additional functions and SQL queries used by the application.
+
+The code sets up the basic structure of the application's user interface using Streamlit. It creates a sidebar with a "Login Page" header and two input fields for username and password. The user enters their credentials, and if the "Validate" checkbox is selected, the code calls the `validate_password` function from the `sql_queries` module to check if the entered username and password are valid.
+
+If the password is validated successfully, the code retrieves the user's role using the `get_user_role` function from `sql_queries`. If the user role is found, it is capitalized and displayed in a subheader.
+
+Next, the code checks if the user is a librarian by calling the `is_librarian` function from `sql_queries`. If the user is a librarian, the code displays a tabbed interface with several sections: "Book Management," "Book Issue," "Book Return," "Show Library Card Details," and "User Management."
+
+Within each tab, specific functionality is implemented. For example, in the "Book Management" tab, there is a form to insert a new book, which is created using the `create_new_book_form` function from the `utilities` module.
+
+Similarly, in the "Book Issue" and "Book Return" tabs, book issuing and returning functionalities are implemented using the `issue_book` and `return_issued_book` functions from the `utilities` module, respectively.
+
+In the "Show Library Card Details" tab, there is a checkbox that, when selected, calls the `show_library_card_details` function from `utilities` to display the library card details.
+
+In the "User Management" tab, there is a form to create a new user. Depending on the selected user type (student or faculty), the `create_new_student_form` or corresponding function for creating a faculty member is called from `utilities`.
+
+After the main interface, there is another section in the sidebar with a header and a checkbox for "Show Library Card Details." When this checkbox is selected, it displays the library card details by calling the `show_library_card_details` function from `utilities`.
 
 ***
 
