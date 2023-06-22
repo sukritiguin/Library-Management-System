@@ -620,13 +620,14 @@ def show_library_card_details():
             st.markdown("<h5 style='color: yellowgreen;'>Currently Borrowed Books</h5>", unsafe_allow_html=True)
             st.dataframe(currently_all_issued_books)
 
-"""
 def return_issued_book(librarian_username):
     st.header('Return Book')
-    book_return_checkbox = st.checkbox('Return Book')
-    if 'load_state' not in st.session_state:
-        st.session_state.load_state = False
-    if book_return_checkbox or st.session_state.load_state:
+    book_return_checkbox = st.radio(label='Get User', options=['Select', 'Not Select'], index=1)
+    # book_return_checkbox = st.checkbox('Return Book')
+    # if 'load_state' not in st.session_state:
+    #     st.session_state.load_state = False
+    # if book_return_checkbox or st.session_state.load_state:
+    if book_return_checkbox == 'Select':
         st.markdown("<h4 style='color: yellowgreen;'>Scan Library Card QR from pop up camera</h4>", unsafe_allow_html=True)
         user = get_username_from_QR("Show QR on Library Card : Book Return")
         if user == None:
@@ -645,10 +646,15 @@ def return_issued_book(librarian_username):
                     days_borrowed = borrowd_book_dict[curr_book_isbn]['days_borrowed']
                     fine_days = 0
                     fine_amount = 0
-                    if days_borrowed>10:
+                    if days_borrowed<=10:
+                        st.success(f'Fine for {fine_days} days and fine amount Rs.{fine_amount}')
+                        sql_quries.update_transaction(book_isbn=curr_book_isbn, borrower_username=user,
+                                                      librarian_username=librarian_username)
+                    else:
                         fine_days = days_borrowed - 10
                         fine_amount = fine_days*2
                         st.warning(f'Fine for {fine_days} days and fine amount Rs.{fine_amount}')
+                        sql_quries.update_transaction(book_isbn=curr_book_isbn, borrower_username=user, librarian_username=librarian_username)
                         pass
                     # submitting_fine(fine_amount=fine_amount,curr_book_isbn=curr_book_isbn,user=user,librarian_username=librarian_username)
 
@@ -658,14 +664,13 @@ def return_issued_book(librarian_username):
                     #                                   librarian_username=librarian_username)
 
                     # Use streamlit.hash() to prevent the page from reloading when the button is clicked
-                    fine_submitted_click = st.radio(label='Fine Submitted ?', options=['NO', 'YES'], index=0)
-                    if fine_submitted_click == 'YES':
-                        sql_quries.update_transaction(book_isbn=curr_book_isbn, borrower_username=user,
-                                                      librarian_username=librarian_username)
+                    # fine_submitted_click = st.radio(label='Fine Submitted ?', options=['NO', 'YES'], index=0)
+                    # if fine_submitted_click == 'YES':
+                    #     sql_quries.update_transaction(book_isbn=curr_book_isbn, borrower_username=user,
+                    #                                   librarian_username=librarian_username)
                 pass
         pass
 
-"""
 
 import streamlit as st
 
@@ -677,7 +682,7 @@ def get_borrowed_books(username):
 def get_user_role(username):
     return sql_quries.get_user_role(username)
 
-
+"""
 def return_issued_book(librarian_username):
     st.header('Return Book')
     book_return_checkbox = st.checkbox('Return Book')
@@ -713,6 +718,7 @@ def return_issued_book(librarian_username):
                     if fine_submitted_click == 'YES':
                         sql_quries.update_transaction(book_isbn=curr_book_isbn, borrower_username=user,
                                                       librarian_username=librarian_username)
+"""
 """
 
 """

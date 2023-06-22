@@ -44,5 +44,12 @@ if st.sidebar.checkbox("Validate"):
                         pass
         else:
             st.warning('User not stored in users table')
+        pass
     else:
         st.header("Login Failed")
+
+st.sidebar.header('-----------------------------------------')
+if st.sidebar.checkbox("Show Library Card Details :"):
+    st.header('Show Library Card Details')
+    library_card_details_checkbox = st.checkbox('Show', value=False)
+    if library_card_details_checkbox: utilities.show_library_card_details()
