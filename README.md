@@ -11,6 +11,14 @@
 ![image](https://github.com/sukritiguin/Library-Management-System/assets/89704581/4b50b155-89f8-4742-a6f7-81f22cbe246e)
 **Show QR on Library Card to get recent status**
 ![image](https://github.com/sukritiguin/Library-Management-System/assets/89704581/c3a12fd8-236c-4051-ab0e-b002b5f5df68)
+**Not this is the result**
+
+
+![image](https://github.com/sukritiguin/Library-Management-System/assets/89704581/41448a6f-4744-4778-8707-b5d7248c0b6e)
+**After selecting `select` option, camera appears to check the QR on library card.**
+![image](https://github.com/sukritiguin/Library-Management-System/assets/89704581/81dd8765-d608-4b5c-914a-ac3bbe09375c)
+**Now show the QR of the book you want to return**
+
 
 
 
