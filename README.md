@@ -8,6 +8,9 @@
 ![image](https://github.com/sukritiguin/Library-Management-System/assets/89704581/2a94514e-ff7d-400a-a9e5-548b6688cad1)
 ![image](https://github.com/sukritiguin/Library-Management-System/assets/89704581/fa39df04-0a63-49d1-b196-62e1d4968203)
 
+![image](https://github.com/sukritiguin/Library-Management-System/assets/89704581/4b50b155-89f8-4742-a6f7-81f22cbe246e)
+**Show QR on Library Card to get recent status**
+![image](https://github.com/sukritiguin/Library-Management-System/assets/89704581/c3a12fd8-236c-4051-ab0e-b002b5f5df68)
 
 
 
