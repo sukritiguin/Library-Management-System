@@ -51,7 +51,7 @@ In the "User Management" tab, there is a form to create a new user. Depending on
 After the main interface, there is another section in the sidebar with a header and a checkbox for "Show Library Card Details." When this checkbox is selected, it displays the library card details by calling the `show_library_card_details` function from `utilities`.
 
 ***
-
+### `sql_quaries.py`
 **Several functions that interact with a PostgreSQL database using the psycopg2 library.**
 These functions serve different purposes related to managing the Library Management System (LMS). Let's go through each function and describe its functionality:
 
@@ -91,7 +91,9 @@ Overall, these functions provide various functionalities for user management, bo
 
 ***
 
-The **`file_utilities.py`** module in project "LMS" appears to contain several utility functions for various purposes. Here's a breakdown of each function:
+### `utilities.py`
+
+The **`utilities.py`** module in project "LMS" appears to contain several utility functions for various purposes. Here's a breakdown of each function:
 
 1. `paste_qr(library_card, qr)`: This function takes a library card image (`library_card`) and a QR code image (`qr`) as input. It pastes the QR code onto the library card image and returns the modified image.
 
