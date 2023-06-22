@@ -66,3 +66,45 @@ These functions serve different purposes related to managing the Library Managem
 15. Lastly, there is a piece of code at the end that includes a transactional query to retrieve book details for a particular user based on their borrowed transactions.
 
 Overall, these functions provide various functionalities for user management, book management, and transaction handling within the Library Management System.
+
+
+
+***
+
+The **`file_utilities.py`** module in project "LMS" appears to contain several utility functions for various purposes. Here's a breakdown of each function:
+
+1. `paste_qr(library_card, qr)`: This function takes a library card image (`library_card`) and a QR code image (`qr`) as input. It pastes the QR code onto the library card image and returns the modified image.
+
+2. `generate_QR(info_dict)`: This function generates a QR code image based on the information provided in the `info_dict` dictionary. The dictionary is converted to a string, and then a QR code is generated using the `qrcode` library. The function returns the bytes value of the QR code image.
+
+3. `random_password_generator()`: This function generates a random password of length 15 using uppercase letters, lowercase letters, and digits. It returns the generated password as a string.
+
+4. `is_valid_email(email)`: This function checks if an email address is valid using a regular expression pattern. It returns `True` if the email is valid and `False` otherwise.
+
+5. `valid_contact_number(contact_number)`: This function validates a contact number by checking if it is numeric and has a length of 10. It returns `True` if the contact number is valid and `False` otherwise.
+
+6. `contains_special_chars(input_string)`: This function checks if a string contains any special characters. It returns `True` if the string contains special characters and `False` otherwise.
+
+7. `contains_digits(input_string)`: This function checks if a string contains any digits (numeric characters). It returns `True` if the string contains digits and `False` otherwise.
+
+8. `has_trailing_spaces(input_string)`: This function checks if a string contains trailing spaces on both the left and right sides. It returns `True` if trailing spaces are found and `False` otherwise.
+
+9. `get_username_from_QR(window_name)`: This function captures frames from the camera and detects QR codes. It extracts the username from the decoded QR code data and returns it as a string.
+
+10. `create_new_student_form()`: This function creates a form for entering information about a new student. It uses Streamlit library to create input fields for various student details such as first name, middle name, last name, address, contact number, email, etc. It also performs validation checks on the input fields and displays success or warning messages accordingly. Upon submission, the function inserts the student's data into a database and generates a library card with a QR code.
+
+11. `random_password_generator()`: This function generates a random password. It uses a combination of uppercase letters, lowercase letters, and digits to create a password of length 15 characters.
+
+12. `is_valid_email(email)`: This function validates an email address using a regular expression pattern. It checks if the email address has the correct format of username@domain.extension. It returns `True` if the email is valid, and `False` otherwise.
+
+13. `valid_contact_number(contact_number)`: This function validates a contact number. It checks if the contact number is numeric and has a length of 10 digits. It returns `True` if the contact number is valid, and `False` otherwise.
+
+14. `contains_special_chars(input_string)`: This function checks if a string contains any special characters. It defines a string of special characters and loops through each character in the input string to check if it matches any special character. It returns `True` if a special character is found, and `False` otherwise.
+
+15. `contains_digits(input_string)`: This function checks if a string contains any digits (numeric characters). It loops through each character in the input string and checks if it is a digit. It returns `True` if a digit is found, and `False` otherwise.
+
+16. `has_trailing_spaces(input_string)`: This function checks if a string contains trailing spaces on both the left and right sides. It uses the `rstrip()` and `lstrip()` functions to remove the trailing spaces from the input string and compares it with the original string. If they are not equal, it means there are trailing spaces. It returns `True` if trailing spaces are found on both sides, and `False` otherwise.
+
+17. `get_username_from_QR(window_name)`: This function captures a frame from the camera, converts it to grayscale, and detects QR codes in the frame. It extracts the barcode data from the QR code and returns the username if it is found in the barcode data. It uses the `cv2` and `pyzbar` libraries for image processing and QR code decoding.
+
+18. `create_new_student_form()`: This function creates a form for entering new student information. It uses Streamlit to display input fields for first name, middle name, last name, address, contact number, parent number, email, department, admission year, graduation year, and current address. It performs validation checks on the input values and displays warnings if any validation fails. It also checks if the mobile number and email are already registered in the database. If all the input values are valid, it inserts the student data into the database, generates a library card, and displays a QR code with the student information.
